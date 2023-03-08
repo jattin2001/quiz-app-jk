@@ -1,0 +1,236 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  height: 92vh;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-top: 0;
+  color: #3498db;
+}
+
+header p {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid gray;
+  margin-bottom: 2em;
+}
+
+header label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+select {
+  font-size: 0.8rem;
+  padding: 5px;
+  border-radius: 6px;
+  width: 50%;
+}
+
+header button {
+  font-size: 1rem;
+  padding: 0.4em 1em;
+  margin-top: 2em;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #3e8e41;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* Main styles */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+#quiz-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+}
+
+.question {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: teal;
+  margin-bottom: 1em;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  color: burlywood;
+}
+
+/* Hide default radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Style custom radio buttons */
+input[type="radio"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Style custom radio buttons when selected */
+input[type="radio"]:checked + label:before {
+  background-color: #333;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-left: 0.1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+label:hover {
+  color: gray;
+  transform: scale(1.03);
+}
+
+.submit {
+  font-size: 1.2rem;
+  background: whitesmoke;
+  padding: 0.3em 1em;
+  border-radius: 6px;
+  margin-bottom: 1em;
+}
+
+.submit:hover {
+  background: gray;
+}
+
+.hidden {
+  display: none;
+}
+
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+
+#result-container {
+  font-size: 1.2rem;
+  color: green;
+  padding: 1em;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+footer p {
+  margin: 0;
+}
+/* Responsive styles */
+@media only screen and (min-width: 750px) {
+  .header {
+    padding: 2rem;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 0.81rem;
+  }
+  select {
+    font-size: 1.2rem;
+    padding: 3px;
+    margin: 5px;
+    width: 30%;
+  }
+  header button {
+    font-size: 16px;
+    padding: 8px;
+  }
+  main {
+    margin: 1rem;
+  }
+  .question {
+    font-size: 1.3rem;
+  }
+  .options {
+    flex-direction: column;
+  }
+  label {
+    margin-bottom: 0.5rem;
+  }
+  .submit {
+    font-size: 1.1rem;
+    padding: 0.1em;
+  }
+  footer {
+    font-size: 0.7rem;
+  }
+}
